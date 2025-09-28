@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Designs | Portfolio </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar">
+    <div id="navbar-placeholder"></div>
+  </div>
+
+  <!-- Heading -->
+  <section class="page-heading">
+    <h2>
+      <span class="gray-text">OUR</span>
+      <span class="black-text">GRAPHIC DESIGNS</span>
+    </h2>
+  </section>
+
+
+
+
+  <!-- Pinterest-style Masonry Grid -->
+  <section class="pin-gallery">
+    <div class="pin" onclick="openPin(this)" data-title="Creative Poster Design"
+      data-desc="A bold and modern poster created for marketing campaigns.">
+      <img src="images/Designs/Design01.jpg" alt="Creative Poster Design">
+      <div class="pin-desc">Creative Poster Design</div>
+    </div>
+
+    <div class="pin" onclick="openPin(this)" data-title="Minimalist Logo"
+      data-desc="Sleek, professional logo designed for startups.">
+      <img src="images/Designs/Design02.jpg" alt="Minimalist Logo">
+      <div class="pin-desc">Minimalist Logo</div>
+    </div>
+
+    <div class="pin tall" onclick="openPin(this)" data-title="Tall Infographic"
+      data-desc="Visually rich infographic for educational content.">
+      <img src="images/Designs/Design03.jpg" alt="Tall Infographic">
+      <div class="pin-desc">Tall Infographic</div>
+    </div>
+
+    <div class="pin" onclick="openPin(this)" data-title="Tall Infographic"
+      data-desc="Visually rich infographic for educational content.">
+      <img src="images/Designs/Design01.jpg" alt="Tall Infographic">
+      <div class="pin-desc">Tall Infographic</div>
+    </div>
+
+    <div class="pin" onclick="openPin(this)" data-title="Tall Infographic"
+      data-desc="Visually rich infographic for educational content.">
+      <img src="images/Designs/Design06.jpg" alt="Tall Infographic">
+      <div class="pin-desc">Tall Infographic</div>
+    </div>
+
+    <div class="pin wide" onclick="openPin(this)" data-title="Tall Infographic"
+      data-desc="Visually rich infographic for educational content.">
+      <img src="images/Designs/Design05.png" alt="Tall Infographic">
+      <div class="pin-desc">Tall Infographic</div>
+    </div>
+
+    <div class="pin" onclick="openPin(this)" data-title="Tall Infographic"
+      data-desc="Visually rich infographic for educational content.">
+      <img src="images/Designs/Design06.jpg" alt="Tall Infographic">
+      <div class="pin-desc">Tall Infographic</div>
+    </div>
+
+    <div class="pin" onclick="openPin(this)" data-title="Tall Infographic"
+      data-desc="Visually rich infographic for educational content.">
+      <img src="images/Designs/Design04.jpg" alt="Tall Infographic">
+      <div class="pin-desc">Tall Infographic</div>
+    </div>
+
+    <!-- Keep Adding here  -->
+    <div class="pin" onclick="openPin(this)" data-title="Tall Infographic"
+      data-desc="Visually rich infographic for educational content.">
+      <img src="images/Designs/Design06.jpg" alt="Tall Infographic">
+      <div class="pin-desc">Tall Infographic</div>
+    </div>
+
+    <div class="pin wide" onclick="openPin(this)" data-title="Tall Infographic"
+      data-desc="Visually rich infographic for educational content.">
+      <img src="images/Designs/Design05.png" alt="Tall Infographic">
+      <div class="pin-desc">Tall Infographic</div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="pinModal" class="pin-modal">
+    <span class="close" onclick="closePin()">&times;</span>
+    <div class="modal-content">
+      <div class="modal-img">
+        <img id="modalImg" src="" alt="">
+      </div>
+      <div class="modal-info">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 👉 keep adding more designs here -->
+  </section>
+  <!-- CALL TO ACTION -->
+  <section class="about-section">
+    <h2 class="about-text">
+      Let's make your <span>Design a Brand</span>
+    </h2>
+    <a href="become-a-client.html" class="btn-about">Let's Talk</a>
+  </section>
+  <!-- Footer -->
+  <div id="footer">
+    <div id="footer-placeholder"></div>
+  </div>
+
+  </div>
+  <script>
+    // Hero scroll animation
+    window.addEventListener("scroll", () => {
+      let scrollY = window.scrollY;
+      document.getElementById("line1").style.transform = `translateX(${scrollY * 0.2}px)`;
+      document.getElementById("line2").style.transform = `translateX(-${scrollY * 0.2}px)`;
+    });
+
+    // Load footer dynamically
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+
+    // Load navbar dynamically + attach JS
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+
+        // After navbar is injected, load its JS
+        const script = document.createElement("script");
+        script.src = "navbar.js";
+        document.body.appendChild(script);
+      });
+  </script>
+
+  <script src="script.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons(); // initialize icons
+  </script>
+
+
+  <script src="design.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #111;
+}
+
+/* Case Studies Heading */
+.case-studies-heading {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.case-studies-heading h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.case-studies-heading p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Blogs List */
+.blogs-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px 60px;
+}
+
+.blog-card {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.blog-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.blog-card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.blog-card .meta {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.blog-card p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.blog-card .read-more {
+  color: #0077ff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Modal */
+.blog-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  /* reduce padding for smaller screens */
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 800px;
+  /* for large screens */
+  width: 95%;
+  /* 👈 make it responsive */
+  max-height: 85vh;
+  /* 👈 fit inside viewport */
+  overflow-y: auto;
+  position: relative;
+  box-sizing: border-box;
+  /* ensure padding doesn't push outside */
+}
+
+.blog-modal .close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* 📱 Mobile Fix */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .blog-modal .close {
+    top: 8px;
+    right: 10px;
+    font-size: 22px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .blogs-list {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .case-studies-heading h2 {
+    font-size: 28px;
+  }
+}

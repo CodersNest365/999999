@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="marketing.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- NavBar -->
+    <div id="navbar-placeholder"></div>
+
+<!-- Other Work Starts here -->
+    <!-- ========== FOOTER ========== -->
+    <div id="footer-placeholder"></div>
+    <script>
+        // Load footer dynamically
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+
+        // Load navbar dynamically + attach JS
+        fetch("navbar.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("navbar-placeholder").innerHTML = data;
+
+                // After navbar is injected, load its JS
+                const script = document.createElement("script");
+                script.src = "navbar.js";
+                document.body.appendChild(script);
+            });
+    </script>
+</body>
+</html>

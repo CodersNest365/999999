@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="blogs.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar">
+    <div id="navbar-placeholder"></div>
+  </div>
+
+  <!-- Case Studies Heading -->
+  <section class="case-studies-heading">
+    <h2>Case Studies & Project Stories</h2>
+    <p>Dive deep into our projects, technologies, and problem-solving journeys.</p>
+  </section>
+
+  <!-- Blogs Section -->
+  <section class="blogs-list">
+    <div class="blog-card" onclick="openBlog(this)" data-title="Why Every Developer Should Have A Blog"
+      data-meta="Published 2 days ago • 5 min read • 8 comments"
+      data-full="Here goes the full blog content for why every developer should have a blog. You can expand on benefits, SEO, writing consistency, portfolio building, etc.">
+      <h3>Why Every Developer Should Have A Blog</h3>
+      <span class="meta">Published 2 days ago • 5 min read • 8 comments</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor...</p>
+      <a class="read-more">Read more</a>
+    </div>
+
+    <div class="blog-card" onclick="openBlog(this)" data-title="A Guide to Becoming a Full-Stack Developer"
+      data-meta="Published 3 months ago • 9 min read • 20 comments"
+      data-full="This is the full blog about becoming a full-stack developer. Explain frontend, backend, and devops. Add roadmap and tools.">
+      <h3>A Guide to Becoming a Full-Stack Developer</h3>
+      <span class="meta">Published 3 months ago • 9 min read • 20 comments</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor...</p>
+      <a class="read-more">Read more</a>
+    </div>
+
+    <div class="blog-card" onclick="openBlog(this)" data-title="High Performance JavaScript"
+      data-meta="Published 1 month ago • 8 min read • 12 comments"
+      data-full="Full blog content on high performance JavaScript: event loop, async optimization, reducing reflows, caching, and memory optimization.">
+      <h3>High Performance JavaScript</h3>
+      <span class="meta">Published 1 month ago • 8 min read • 12 comments</span>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nemo aliquid quo quaerat repudiandae quibusdam quod tempora laudantium odio sequi repellat perferendis eligendi nulla nostrum dignissimos sed, quasi et dolor rem incidunt. Minus voluptatibus nam laboriosam, accusantium excepturi dolores facilis consequuntur totam, ducimus quibusdam ea cumque, maxime maiores enim cum repudiandae sapiente laudantium error non? Possimus, recusandae. Alias, dolores! Eligendi, quia eaque ab excepturi, ullam asperiores ea ipsa temporibus et obcaecati pariatur quisquam expedita, eos magnam non amet omnis quo autem blanditiis animi quae! Provident reprehenderit velit eius optio facilis ab quaerat quod impedit deleniti amet illo iusto fuga repudiandae cumque ex, esse culpa exercitationem eveniet ea at sit incidunt, ratione, harum nostrum! Itaque fugit reprehenderit ad excepturi nobis dolores, accusamus veritatis obcaecati eaque recusandae. Magni soluta corrupti deleniti possimus eveniet, consequatur quis aperiam provident dolores, sint consequuntur impedit deserunt! Dignissimos quo tenetur aliquam corporis perferendis aspernatur, pariatur nostrum dicta unde impedit minus quas porro aperiam iste tempora quos nulla ab sapiente provident voluptatem officiis perspiciatis obcaecati maxime? In, nisi. Architecto officia sunt possimus quae nihil repellendus necessitatibus odit deleniti! Quibusdam, non in perspiciatis consequuntur harum quia eveniet quae corporis earum excepturi molestias! Consectetur placeat, quidem numquam voluptas obcaecati quasi nostrum sit ut, magni iusto necessitatibus repellendus, eveniet officia corporis. Sunt ducimus quis magnam molestias temporibus! Eveniet quaerat pariatur amet minus eaque? Dolores pariatur officia minima perferendis illo iusto tenetur cum architecto incidunt, veniam a delectus assumenda eius commodi asperiores doloribus animi iste. Repellendus dignissimos odit, omnis explicabo ratione architecto eligendi pariatur at laudantium harum atque nulla sequi optio excepturi adipisci expedita inventore, culpa maxime nihil consequuntur. Aliquid modi aliquam unde veritatis deserunt suscipit asperiores ut optio pariatur eaque minima sint accusamus, soluta accusantium nemo architecto reiciendis iure. Nesciunt labore nam nulla, maxime totam praesentium iure quisquam sapiente corporis, omnis consequuntur! Natus sit amet quisquam deserunt laudantium eaque dolorem veritatis exercitationem minus unde, repudiandae nemo voluptas nostrum? Quasi consequatur aliquid dolorum veritatis officia voluptate, impedit nihil consequuntur, doloremque eligendi necessitatibus maxime, sint quae earum voluptates temporibus tempora cupiditate iure amet? Cumque est commodi explicabo fugiat facilis minima provident porro tenetur ab. Perspiciatis quos nisi nulla repellendus modi quasi reiciendis ab totam harum quisquam at, rerum nemo ducimus et dignissimos, ipsam aut ut quod officia esse sunt atque, sit expedita! Ratione ipsa aliquid cumque provident cum esse consectetur nobis officiis necessitatibus ab similique libero perspiciatis vero minima quaerat, aperiam hic dolorem fugit quas excepturi. Sint quod illum debitis nemo odit, iure magnam fuga sequi, recusandae consequuntur aspernatur nam quasi voluptate et error aut necessitatibus praesentium deleniti id natus. Dolorem cum nesciunt reprehenderit eveniet, et ab? Sequi magnam unde corporis harum nihil totam error adipisci, culpa molestiae, asperiores id, eum nostrum ratione reprehenderit perferendis. Nesciunt laboriosam expedita dicta!</p>
+      <a class="read-more">Read more</a>
+    </div>
+  </section>
+
+
+  <!-- Blog Modal -->
+  <div id="blogModal" class="blog-modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeBlog()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <span id="modalMeta"></span>
+      <div id="modalContent"></div> <!-- now can hold HTML like images -->
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <div id="footer">
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Load navbar and footer
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+        const script = document.createElement("script");
+        script.src = "navbar.js";
+        document.body.appendChild(script);
+      });
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+
+    // Modal Logic
+    function openBlog(card) {
+      document.getElementById("modalTitle").textContent = card.dataset.title;
+      document.getElementById("modalMeta").textContent = card.dataset.meta;
+      document.getElementById("modalContent").textContent = card.dataset.full;
+      document.getElementById("blogModal").style.display = "flex";
+    }
+
+    function closeBlog() {
+      document.getElementById("blogModal").style.display = "none";
+    }
+    function openBlog(card) {
+      document.getElementById("modalTitle").textContent = card.dataset.title;
+      document.getElementById("modalMeta").textContent = card.dataset.meta;
+      document.getElementById("modalContent").innerHTML = card.dataset.full; // 👈 now supports HTML
+      document.getElementById("blogModal").style.display = "flex";
+    }
+
+  </script>
+</body>
+
+</html>
